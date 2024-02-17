@@ -58,7 +58,7 @@ const Sidebar = () => {
     <motion.section
       animate={isExpanded ? "expanded" : "nonExpanded"}
       variants={varients}
-      className={`w-1/5 bg-slate-300 h-screen flex flex-col justify-between items-center gap-10 relative ${
+      className={`w-1/5 bg-white shadow-md h-screen flex flex-col justify-between items-center gap-10 relative ${
         isExpanded ? "py-3 px-6" : "py-2 px-2"
       }`}
     >
@@ -84,7 +84,7 @@ const Sidebar = () => {
             <div
               key={item.name}
               className={`flex justify-start items-center gap-4 rounded-xl w-full cursor-pointer ${
-                activeNavIndex === index ? "bg-white text-black" : "text-black"
+                activeNavIndex === index ? "bg-[#ff648b99] text-black" : "text-black"
               } ${isExpanded ? "px-6 py-3" : "p-2 flex justify-center "}`}
               onClick={() => setActiveNavIndex(index)}
             >
@@ -104,7 +104,7 @@ const Sidebar = () => {
       </div>
 
       <div
-        className="bg-[#ff648b99] text-white cursor-pointer absolute top-[50%] right-[-15px] p-3 rounded-full hover:bg-[#ff648b] transition duration-200 "
+        className="bg-[#ff648b99] text-white hidden lg:flex cursor-pointer absolute top-[50%] right-[-15px] p-2 rounded-full hover:bg-[#ff648b] transition duration-200 "
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <FaAngleRight />
